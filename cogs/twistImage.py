@@ -1,4 +1,4 @@
-from PIL import Image
+from PIL import Image, ImageFilter
 import math
 
 
@@ -9,7 +9,6 @@ def twist(buffer=1):
 
     image1 = Image.open('image.png')
     width, height = image1.size
-    i = buffer
     min_center_dist = min(math.ceil(height / 2), math.ceil(width / 2))
     for i in range(0, min_center_dist, buffer):
         image2 = image1.crop((i, i, width - i, height - i)).transpose(3)
