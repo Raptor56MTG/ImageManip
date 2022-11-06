@@ -11,14 +11,11 @@ class BotEvents(commands.Cog):
 
     @commands.Cog.listener()
     async def on_ready(self):
-
         """Message the bot sends on startup"""
-
-        print("I am ready to draft! Notify me when you are ready!")
+        print("I am ready to mainuplate images!")
 
     @commands.Cog.listener()
     async def on_command_error(self, ctx, error):
-
         """Handles various errors for user input."""
 
         if isinstance(error, commands.CommandNotFound):

@@ -13,11 +13,7 @@ async def main():
     bot = commands.Bot(command_prefix="!", intents=intents)
     bot.remove_command("help")
 
-    cogs = ['cogs.bot_events',
-            'cogs.scryfall_commands',
-            'cogs.help_commands',
-            'cogs.remind_commands',
-            'cogs.draft_logic_commands']
+    cogs = ['cogs.bot_events', 'cogs.bot_commands']
 
     for cog in cogs:
         await bot.load_extension(cog)
