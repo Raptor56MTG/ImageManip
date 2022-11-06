@@ -1,6 +1,6 @@
 import discord
 from discord.ext import commands
-from .Imagemanip import twist, blend
+from .imagemanip import twist, blend
 from .utils import embed, image_validation
 
 
