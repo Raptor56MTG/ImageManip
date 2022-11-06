@@ -18,5 +18,5 @@ def twist(buffer=1):
 def blend():
     """This takes an image and rotates 180
     degrees and blends it wth the original."""
-    Image.blend(Image.open('image.png'),
-                Image.open('image.png').transpose(3), 0.5).save('final.png')
+    image = Image.open('image.png')
+    Image.blend(image, image.transpose(3), 0.5).save('final.png')
